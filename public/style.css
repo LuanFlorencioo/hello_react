@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Taviraj:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    --font: "Lato", sans-serif;
+    --font-title: "Taviraj", serif;
+    --font-size: 1.2rem;
+    --yellow: #f2df3a;
+    --blue-light: #3ab4f2;
+    --blue-dark: #0078aa;
+    --linear-hr-color: linear-gradient(180deg, var(--yellow), var(--background-color));
+    --background-color: #101015;
+    --text-color: #f6f6f6;
+    --white: #fff;
+    --radius: 0.2rem;
+}
+
+body {
+    margin: 1.5rem;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--blue-light);
+    border-radius: 4px;
+    border: 2px solid var(--blue-dark);
+}
+
+body,
+input,
+textarea,
+button {
+    font-size: var(--font-size);
+    font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    color: var(--blue-light);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 1rem 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--yellow);
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    border-radius: 5px 5px 0 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+    display: block;
+    border: 1px solid var(--blue-dark);
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    background: var(--white);
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--blue-light);
+    background: var(--background-color);
+    box-shadow: 0 0 0 3px var(--blue-dark);
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius);
+    transition: 0.1s;
+    background: var(--blue-dark);
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 0.8rem 1.6rem;
+    margin: 5px 10px;
+}
+
+button:hover,
+button:focus {
+    background: var(--blue-light);
+    box-shadow: 0 0 0 3px var(--yellow), 0 0 0 4px var(--yellow);
+    outline: none;
+}
+
+button:active {
+    box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+hr {
+    border: 2px solid var(--blue-dark);
+    margin: 2rem auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes logoRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
