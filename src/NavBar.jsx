@@ -12,9 +12,10 @@ const Nav = styled.nav`
 `
 
 export const NavBar = () => {
-    return (
-        <Nav>
-            <Link to="/usestate"><button>useState</button></Link>
-        </Nav>
-    )
+  return (
+    <Nav>
+      <Link to="/usestate"><button>useState</button></Link>
+      <Link to="/fetchapi"><button>Fetch API</button></Link>
+    </Nav>
+  )
 }
