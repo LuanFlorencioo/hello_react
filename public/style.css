@@ -64,23 +64,12 @@ ul {
 }
 
 ul {
-    list-style: none;
+    list-style: square;
 }
 
 li {
     margin-bottom: 0.5rem;
     position: relative;
-}
-
-li::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: var(--yellow);
-    position: absolute;
-    left: -15px;
-    top: 5px;
-    border-radius: 5px 5px 0 5px;
 }
 
 label {
