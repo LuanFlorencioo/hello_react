@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import styled from "styled-components";
+import { FetchApi } from "./FetchApi";
 import { Inicio } from "./Inicio";
 import { NavBar } from "./NavBar";
 import { UseState } from "./UseState";
@@ -32,6 +33,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="usestate" element={<UseState />} />
+        <Route path="fetchapi" element={<FetchApi />} />
       </Routes>
     </div>
   )
