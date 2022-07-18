@@ -36,13 +36,21 @@ export const UseState = () => {
 
     const [things, setThings] = useState(['Chá', 'Suco de azul']);
     const insertThings = () => {
-        const newThing = document.querySelector('input').value;
+        let newThing = document.querySelector('input').value;
         (newThing) ? setThings([newThing, ...things]) : null;
+        document.querySelector('input').value = '';
     }
     const resetThings = () => {
         setThings([]);
     }
     const renderList = things.map((thing, i) => <li key={i}>{thing}</li>);
+
+    const handleKeyPress = (e) => {
+        const enterKey = e.key;
+        (enterKey === 'Enter')
+            ? insertThings()
+            : null;
+    }
 
     return (
         <>
@@ -58,7 +66,7 @@ export const UseState = () => {
             <BuySystem>
                 <div className="BuyConfig">
                     <p>Outro exemplo é usar o useState com arrays, no caso desse exemplo, vamos fazer uma lista de compras</p>
-                    <input type="text" placeholder="digite aqui" maxLength={12} />
+                    <input type="text" placeholder="digite aqui" maxLength={12} onKeyPress={handleKeyPress} />
                     <button onClick={insertThings}>Inserir</button>
                     {things.length >= 1 ? <button onClick={resetThings}>Resetar</button> : ''}
                 </div>
